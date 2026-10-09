@@ -1,0 +1,27 @@
+{
+  "_doc": [
+    "饥饿值（satiety）与心情值（mood）的数值规则，改这个文件就能调手感，不用动代码。",
+    "所有速度都写成「每小时变化多少点」，0~100 标度：",
+    "  satietyDecayPerHour=6 → 满值到见底约 16.7 小时（挂机一整天才饿透，够慢）",
+    "  satiety < moodHungryBelow 时开始掉心情，越接近 0 掉得越快",
+    "  satiety >= moodRegenAbove 时心情按 moodRegenPerHour 稳步回升",
+    "两者之间是「温饱区」：心情既不掉也不涨，保持稳定"
+  ],
+  "max": 100,
+  "start": { "satiety": 100, "mood": 100 },
+
+  "satietyDecayPerHour": 6,
+  "moodHungryBelow": 40,
+  "moodDropPerHourAtZero": 10,
+  "moodRegenAbove": 70,
+  "moodRegenPerHour": 8,
+
+  "tickMs": 30000,
+  "offlineCapHours": 10,
+
+  "tiers": {
+    "_doc": "档位分界：>=high 为 high，>=ok 为 ok，>=low 为 low，再往下是 bad。台词按这四档挑选。",
+    "satiety": { "high": 80, "ok": 45, "low": 20 },
+    "mood":    { "high": 80, "ok": 50, "low": 25 }
+  }
+}

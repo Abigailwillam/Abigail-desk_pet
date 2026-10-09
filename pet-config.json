@@ -1,0 +1,60 @@
+{
+  "name": "阿比桌宠",
+  "size": {
+    "width": 300,
+    "height": 460
+  },
+  "sprites": {
+    "idle": "idle.png",
+    "dragged": "lifted.png",
+    "falling": "falling.png",
+    "happy": "abby.png",
+    "smile": "smile.png",
+    "shy": "shy.png",
+    "sad": "sad.png",
+    "sleepy": "sleepy.png",
+    "surprised": "surprised.png",
+    "wave": "wave.png",
+    "cheer": "cheer.png",
+    "sleep": "sleep.png"
+  },
+  "physics": {
+    "gravity": 0.25,
+    "walkSpeed": 1.15,
+    "maxFallSpeed": 9
+  },
+  "timing": {
+    "idleBeforeWalk": [2500, 7000],
+    "walkDuration": [1400, 3200],
+    "bubbleRead": { "base": 800, "perChar": 150, "min": 1800, "max": 6500 },
+    "holdToDragMs": 1000,
+    "sleepAfterMs": 180000,
+    "idleSpeak": [18000, 42000]
+  },
+  "bubble": {
+    "scale": 30,
+    "maxHeightRatio": 0.3333,
+    "maxWidthRatio": 1.15
+  },
+  "interaction": {
+    "dragMoveThreshold": 12
+  },
+  "dialogs": [
+    "主人今天也在努力呢～",
+    "要抱抱！",
+    "帽子有点歪了……帮我正一下？",
+    "要不要一起吃点心？",
+    "摸摸头～这个我最擅长了。",
+    "呜……你再看电脑我就要闹啦。",
+    "小熊说它也想被摸摸。",
+    "今天也要元气满满哦！",
+    "被拎起来啦……放我下来～",
+    "散步、散步～",
+    "外面天气好吗？我们出去走走吧。"
+  ],
+  "win": {
+    "disableHardwareAcceleration": true,
+    "stopAtScreenBottom": false,
+    "forceDeviceScaleFactor": true
+  }
+}

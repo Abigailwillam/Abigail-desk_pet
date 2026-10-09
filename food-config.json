@@ -1,0 +1,17 @@
+{
+  "coinsPerClick": [8, 12],
+  "pomoCompleteCoins": 30,
+
+  "_doc_food": "satiety = 喂一次加多少饥饿值，mood = 喂一次加多少心情值。价格越贵的食物补得越多。没写这两个字段的食物（含自定义食物）按 defaultFoodGain 走。",
+  "defaultFoodGain": { "satiety": 15, "mood": 8 },
+
+  "foods": [
+    { "id": "cola", "name": "可乐", "price": 50, "icon": "cola.png", "satiety": 8, "mood": 5 },
+    { "id": "grape", "name": "葡萄汁", "price": 60, "icon": "grape.png", "satiety": 10, "mood": 6 },
+    { "id": "orange", "name": "橘子汁", "price": 60, "icon": "orange.png", "satiety": 10, "mood": 6 },
+    { "id": "burger", "name": "汉堡", "price": 100, "icon": "burger.png", "satiety": 22, "mood": 12 },
+    { "id": "riceball", "name": "饭团", "price": 100, "icon": "riceball.png", "satiety": 20, "mood": 12 },
+    { "id": "seafood", "name": "海鲜盛宴", "price": 200, "icon": "seafood.png", "satiety": 40, "mood": 22 },
+    { "id": "chicken", "name": "鸡公煲", "price": 200, "icon": "chicken.png", "satiety": 38, "mood": 20 }
+  ]
+}

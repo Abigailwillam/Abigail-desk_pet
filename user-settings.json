@@ -1,0 +1,8 @@
+{
+  "scale": 1.0,
+  "opacity": 1.0,
+  "alwaysOnTop": true,
+  "bubbleScale": 30,
+  "pomodoro": { "workMin": 25, "breakMin": 5, "autoBreak": true, "autoWork": false },
+  "orb": null
+}

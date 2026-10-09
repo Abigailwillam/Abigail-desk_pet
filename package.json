@@ -1,0 +1,51 @@
+{
+  "name": "abby-desktop-pet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "通用桌宠框架（当前角色：阿比盖尔）",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "smoke": "node scripts/smoke-main.js",
+    "sim": "node scripts/sim-bubble.js",
+    "verify-renderer": "node scripts/verify-renderer.js",
+    "verify-profile": "node scripts/verify-profile.js",
+    "verify-swap": "node scripts/verify-swap.js",
+    "verify-ai": "node scripts/verify-ai.js",
+    "verify-orb": "node scripts/verify-orb.js",
+    "verify-orb-window": "node scripts/verify-orb-window.js",
+    "verify-all": "node scripts/verify-all.js",
+    "dist": "electron-builder --win portable --x64",
+    "postinstall": "node -e \"try{require('child_process').execSync('node node_modules/electron/install.js',{stdio:'inherit',env:{...process.env,ELECTRON_MIRROR:process.env.ELECTRON_MIRROR||'https://npmmirror.com/mirrors/electron/'}})}catch(e){console.warn('electron 二进制下载失败，可手动执行 node node_modules/electron/install.js')}\""
+  },
+  "author": "",
+  "license": "MIT",
+  "build": {
+    "appId": "com.abby.desktoppet",
+    "productName": "AbbyDesktopPet",
+    "electronDist": "node_modules/electron/dist",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "profile/**/*",
+      "pet-config.json",
+      "pet-profile.json",
+      "food-config.json",
+      "scripts/start.js"
+    ],
+    "win": {
+      "target": [
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "AbbyDesktopPet-${version}-portable.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.5.0",
+    "electron-builder": "^26.15.3"
+  }
+}
